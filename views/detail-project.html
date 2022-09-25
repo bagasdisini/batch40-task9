@@ -43,7 +43,7 @@
     </nav>
     <div class="container">
         <div>
-            <h1 class="d-flex justify-content-center fw-bold mb-5">{{.Project.ProjectName}}</h1>
+            <h1 class="d-flex justify-content-center fw-bold mb-5">{{.BlogDetail.ProjectName}}</h1>
         </div>
         <div class="d-flex">
             <img src="{{.Project.Image}}" alt="Foto" class="me-5"
@@ -51,23 +51,23 @@
             <div>
                 <h5 class="mb-3 fw-bold">Duration</h5>
                 <i class="fa-solid fa-calendar-days mb-3" style="width: 25px;"></i>
-                <span>12 Jan 2022 - 12 Mar 2022</span><br>
+                <span>{{.BlogDetail.StartDate}} - {{.BlogDetail.EndDate}}</span><br>
                 <i class="fa-solid fa-clock" style="width: 25px;"></i>
-                <span>2 Month(s)</span><br>
+                <span>{{.BlogDetail.Duration}}</span><br>
                 <h5 class="my-3 fw-bold">Technologies</h5>
-                <i class="fa-brands fa-node mb-3" style="width: 25px;"></i>
+                <i class="fa-brands fa-{{.BlogDetail.NodeJs}} mb-3" style="width: 25px;"></i>
                 <span>Node JS</span><br>
-                <i class="fa-brands fa-vuejs mb-3" style="width: 25px;"></i>
+                <i class="fa-brands fa-{{.BlogDetail.VueJs}} mb-3" style="width: 25px;"></i>
                 <span>Vue JS</span><br>
-                <i class="fa-brands fa-react mb-3" style="width: 25px;"></i>
+                <i class="fa-brands fa-{{.BlogDetail.ReactJs}} mb-3" style="width: 25px;"></i>
                 <span>React JS</span><br>
-                <i class="fa-brands fa-js" style="width: 25px;"></i>
+                <i class="fa-brands fa-{{.BlogDetail.TypeScript}}" style="width: 25px;"></i>
                 <span>TypeScript</span><br>
             </div>
         </div>
     </div>
     <div class="container my-5" style="text-align: justify;">
-        <p>{{.Project.Description}}</p>
+        <p>{{.BlogDetail.Description}}</p>
     </div>
 </body>
 
